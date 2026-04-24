@@ -59,34 +59,7 @@ width="150" height="180">
 <input type = "Submit"value="Submit">
 <br>
 <input type="Reset"value="Reset"><br>
-<script>
-function checkAnswers() {
-
-    document.querySelectorAll('.option').forEach(el => {
-        el.classList.remove('correct', 'incorrect');
-    });
-
-    let answers = {
-        question1: "7",
-        question2: "Potato",
-        question3: "Blue"
-    };
-
-    for (let key in answers) {
-        let selected = document.querySelector(`input[name="${key}"]:checked`);
-
-        if (selected) {
-            let option = selected.closest(".option");
-
-            if (selected.value === answers[key]) {
-                option.classList.add("correct");
-            } else {
-                option.classList.add("incorrect");
-            }
-        }
-    }
-}
-</script>
 </form>
 </body>
 </html>
+
